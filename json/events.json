@@ -1,0 +1,33 @@
+{
+	"success": 1,
+	"result": [
+		{
+			"event_type_key": "267",
+			"event_type_type": "Atp Doubles"
+		},
+		{
+			"event_type_key": "265",
+			"event_type_type": "Atp Singles"
+		},
+		{
+			"event_type_key": "279",
+			"event_type_type": "Boys Doubles"
+		},
+		{
+			"event_type_key": "277",
+			"event_type_type": "Boys Singles"
+		},
+		{
+			"event_type_key": "282",
+			"event_type_type": "Challenger Men Doubles"
+		},
+		{
+			"event_type_key": "281",
+			"event_type_type": "Challenger Men Singles"
+		},
+		{
+			"event_type_key": "275",
+			"event_type_type": "Challenger Women Doubles"
+		}
+   ]
+}
