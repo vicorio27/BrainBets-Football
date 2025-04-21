@@ -1,9 +1,8 @@
 from dataclasses import dataclass
 
 """
-Event
+Response Wrapper class
 """
-
 
 @dataclass
 class Response:

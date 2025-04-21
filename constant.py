@@ -2,15 +2,13 @@ import os
 
 TIME_ZONE = "America/New_York"
 ENVIRONMENT = (os.environ.get("ENVIRONMENT", "dev"),)
+CONTENT_TYPE = "application/json"
 
-API_TENNIS = {
-    "API": "https://api.api-tennis.com/tennis/",
-    "APIKEY": os.environ.get("API_TENNIS_KEY"),
-    "METHOD_GET_EVENTS": "get_events",
-    "METHOD_GET_TOURNAMENTS": "get_tournaments",
-    "METHOD_GET_FIXTURES": "get_fixtures",
-    "METHOD_GET_LIVESCORE": "get_livescore",
-    "METHOD_H2H": "get_H2H",
-    "METHOD_STANDINGS": "get_standings",
-    "METHOD_PLAYERS": "get_players",
+API_FOOTBALL = {
+    "API": "https://v3.football.api-sports.io",
+    "API_HOST": "v3.football.api-sports.io",
+    "API_URI_LEAGUES": "/leagues",
+    "API_URI_TEAM_STADISTICS": "/teams/statistics",
+    "API_URI_TEAMS": "/teams",
+    "API_KEY": os.environ.get("API_TENNIS_KEY", "6822888ac2f21a885c856c17229faeef"),
 }
