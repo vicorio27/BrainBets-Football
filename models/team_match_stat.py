@@ -1,15 +1,22 @@
 """
-Match Object
+TeamMatch Object
 """
 
-from models.team_match_stat import TeamMatch
 
-
-class Match:
-    local_team: TeamMatch
-    away_team: TeamMatch
-    # exmp: 1 - 0 or 0 - 1
-    result: str
+class TeamMatch:
+    name: str
+    goals: int
+    assists: int
+    corners: int
+    """
+    "cards": {
+		  "red": 3,
+		  "yellow": 2,
+	    }
+    """
+    cards: dict
+    shoot: int
+    on_target_shoot: int
 
     def __init__(self, **kwargs):
         """

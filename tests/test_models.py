@@ -8,4 +8,3 @@ def test_team_stadistics_wrapper():
         jts = json.load(f)
         team_stadistics = Response(**jts)
         assert jts["success"] == team_stadistics.success
-

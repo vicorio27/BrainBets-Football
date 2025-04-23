@@ -30,10 +30,12 @@ logging.basicConfig(filename="test.log", level=logging.DEBUG)
 
 VERSION = "1.0"
 
+
 @app.route("/", methods=["GET"])
 @cross_origin()
 def spec():
     return "BRAINBEST API"
+
 
 if __name__ == "__main__":
     app.run()

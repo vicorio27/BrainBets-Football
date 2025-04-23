@@ -2,17 +2,18 @@
 MatchOverView
 """
 
-from models.team_overview import Team
+from models.team_overview import TeamOverview
 from models.match import Match
 
-class MatchOverview:
-    team1_stats: Team
-    team1_last_matches : list[Match]
-    team1_last_tournament_matches : list[Match]
 
-    team2_stats: Team
-    team2_last_matches : list[Match]
-    team2_last_tournament_matches : list[Match]
+class MatchOverview:
+    team1_stats: TeamOverview
+    team1_last_matches: list[Match]
+    team1_last_tournament_matches: list[Match]
+
+    team2_stats: TeamOverview
+    team2_last_matches: list[Match]
+    team2_last_tournament_matches: list[Match]
 
     team1_and_team2_last_matches_between_them: list[Match]
 

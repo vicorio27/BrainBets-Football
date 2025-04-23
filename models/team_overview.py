@@ -2,6 +2,7 @@
 Team Object
 """
 
+
 class TeamOverview:
     name: str
     """
@@ -31,11 +32,11 @@ class TeamOverview:
     """
     {
 		  "best_win": '2-0',
-		  "wrost_lost": '0-5',
+		  "worst_lost": '0-5',
 		  "biggest_goals_for": 2,
           "biggest_goals_against": 4,
-          "wrost_goals_for": 4,
-          "wrost_goals_against": 5,
+          "worst_goals_for": 4,
+          "worst_goals_against": 5,
           "clean_sheet": 6,
           "failed_to_score": 8
 	}
@@ -44,11 +45,11 @@ class TeamOverview:
     """
     {
 		  "best_win": '2-0',
-		  "wrost_lost": '0-5',
+		  "worst_lost": '0-5',
 		  "biggest_goals_for": 2,
           "biggest_goals_against": 4,
-          "wrost_goals_for": 4,
-          "wrost_goals_against": 5,
+          "worst_goals_for": 4,
+          "worst_goals_against": 5,
           "clean_sheet": 6,
           "failed_to_score": 8
 	}
@@ -149,9 +150,6 @@ class TeamOverview:
     
     """
     goal_percentage: dict
-
-
-
 
     def __init__(self, **kwargs):
         """
