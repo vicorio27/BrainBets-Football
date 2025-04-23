@@ -1,6 +1,5 @@
 from enum import Enum
 
-
 class StatisticsTypes(Enum):
     SHOTS_ON_GOAL = "Shots on Goal"
     SHOTS_OFF_GOAL = "Shots off Goal"
@@ -16,4 +15,4 @@ class StatisticsTypes(Enum):
     RED_CARD = "Red Cards"
     GOALKEEPER_SAVES = "Goalkeeper Saves"
     TOTAL_PASSES = "Total passes"
-    PASSES_ACURATE = "Passes accurate"
+    PASSES_ACCURATE = "Passes accurate"

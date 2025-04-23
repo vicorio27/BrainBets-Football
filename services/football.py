@@ -3,7 +3,7 @@ from services.services import get
 from constant import API_FOOTBALL, ENVIRONMENT
 
 
-async def get_team_stadistics(league, season, team, date):
+def get_team_stadistics(league, season, team, date):
     if ENVIRONMENT == "dev":
         with open("./json/team_stadistics.json") as f:
             jts = json.load(f)

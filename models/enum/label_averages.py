@@ -1,0 +1,21 @@
+from enum import Enum
+
+class LabelAverages(Enum):
+    TOTAL = "total"
+    GOALS = "goals"
+    CORNERS = "corners"
+    FOULS = "fouls"
+    OFFSIDES = "offsides"
+    POSSESION = "possesion"
+    GOALKEEPER_SAVES = "goalkeeper_saves"
+    PASSES = "passes"
+    PASSES_ACCURATE = "accurate"
+    SHOTS = "shots"
+    ON_GOAL = "on_goal"
+    OFF_GOAL = "off_goal"
+    BLOCKED = "blocked"
+    INSIDEBOX = "insidebox"
+    OUTSIDEBOX = "outside"
+    CARDS = "cards"
+    RED = "red"
+    YELLOW = "yellow"

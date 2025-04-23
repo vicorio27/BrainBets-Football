@@ -7,18 +7,28 @@ class TeamOverview:
     name: str
     """
     {
-		"goal": 4,
-		"assists": 2,
+        "goals": 0,
         "corners": 2,
-        "shots":{
-            "value": 3,
-            "on_target": 4
-        }
-        "cards": {
-		  "red": 3,
-		  "yellow": 2,
-	    }
-	}
+        "fouls": 0,
+        "offsides": 0,
+        "possesion": 0,
+        "goalkeeper_saves": 0,
+        "passes": {"total": 0, "accurate": "10%"},
+        "shots": 
+        {
+            "total": 3,
+            "on_goal": 4,
+            "off_goal": 0,
+            "blocked": 0,
+            "insidebox": 0,
+            "outsidebox": 0,
+        },
+        "cards": 
+        {
+            "red": 3,
+            "yellow": 2,
+        },
+    }
     """
     averages: dict
     """
