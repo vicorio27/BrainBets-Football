@@ -36,6 +36,5 @@ VERSION = "1.0"
 def spec():
     return "BRAINBEST API"
 
-
 if __name__ == "__main__":
     app.run()

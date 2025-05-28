@@ -4,6 +4,9 @@ TIME_ZONE = "America/New_York"
 ENVIRONMENT = os.environ.get("ENVIRONMENT", "dev")
 CONTENT_TYPE = "application/json"
 
+JSON_RESPONSES_FOLDER = "./json/responses"
+JSON_API_FOOTBALL_RESPONSES_FOLDER = "./json/api-football-responses"
+
 API_FOOTBALL = {
     "API": "https://v3.football.api-sports.io",
     "API_KEY": os.environ.get("API_TENNIS_KEY", "6822888ac2f21a885c856c17229faeef"),
@@ -18,6 +21,5 @@ API_FOOTBALL = {
     "API_URI_FIXTURES_STATISTICS": "/fixtures/statistics",
     "API_URI_FIXTURES_LINEUPS": "/fixtures/lineups",
     "API_URI_FIXTURES_PLAYER_STATISTICS": "/fixtures/players",
-    "API_URI_PREDICTIONS": "/predictions",
-    "MATCHES_STATUS": "FT-AET-PEN" "STATISTICS_TYPES",
+    "API_URI_PREDICTIONS": "/predictions"
 }
