@@ -1,8 +1,19 @@
 from enum import Enum
 
+
 class LabelAverages(Enum):
     TOTAL = "total"
     GOALS = "goals"
+    LOCAL_GOALS = "local_goals"
+    AWAY_GOALS = "away_goals"
+    LOCAL_HALFTIME_GOALS = "local_halftime_goals"
+    AWAY_HALFTIME_GOALS = "away_halftime_goals"
+    LOCAL_FULLTIME_GOALS = "local_fulltime_goals"
+    AWAY_FULLTIME_GOALS = "away_fulltime_goals"
+    LOCAL_EXTRATIME_GOALS = "local_extratime_goals"
+    AWAY_EXTRATIME_GOALS = "away_extratime_goals"
+    LOCAL_PENALTY = "local_penalty"
+    AWAY_PENALTY = "away_penalty"
     CORNERS = "corners"
     FOULS = "fouls"
     OFFSIDES = "offsides"
@@ -16,6 +27,7 @@ class LabelAverages(Enum):
     BLOCKED = "blocked"
     INSIDEBOX = "insidebox"
     OUTSIDEBOX = "outside"
+    MATCHES = "matches"
     CARDS = "cards"
     RED = "red"
     YELLOW = "yellow"

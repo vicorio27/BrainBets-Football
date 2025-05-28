@@ -1,11 +1,11 @@
 import json
 from services.services import get
-from constant import API_FOOTBALL, ENVIRONMENT
+from constant import API_FOOTBALL, ENVIRONMENT, JSON_RESPONSES_FOLDER, JSON_API_FOOTBALL_RESPONSES_FOLDER
 
 
 def get_team_stadistics(league, season, team, date):
     if ENVIRONMENT == "dev":
-        with open("./json/team_stadistics.json") as f:
+        with open(f"{JSON_API_FOOTBALL_RESPONSES_FOLDER}/team_stadistics.json") as f:
             jts = json.load(f)
             return jts
 
@@ -37,40 +37,55 @@ LIVE	In Progress	In Play	Used in very rare cases. It indicates a fixture in prog
 
 
 def get_fixtures(league, season, team, status, date):
+    if ENVIRONMENT == "dev":
+        with open(f"{JSON_API_FOOTBALL_RESPONSES_FOLDER}/fixtures.json") as f:
+            jts = json.load(f)
+            return jts    
     response = get(API_FOOTBALL["API_URI_FIXTURES"], league, season, team, status, date)
     return response
 
 
 def get_injuries(league, season, team, date):
+    if ENVIRONMENT == "dev":
+        with open(f"{JSON_API_FOOTBALL_RESPONSES_FOLDER}/injures.json") as f:
+            jts = json.load(f)
+            return jts      
     response = get(API_FOOTBALL["API_URI_INJURIES"], league, season, team, date)
     return response
 
 
 def get_standings(fixture):
-    response = get(API_FOOTBALL["API_URI_FIXTURES_STANDING"], fixture)
+    if ENVIRONMENT == "dev":
+        with open(f"{JSON_API_FOOTBALL_RESPONSES_FOLDER}/fixtures_statistics.json") as f:
+            jts = json.load(f)
+            return jts      
+    response = get(API_FOOTBALL["API_URI_STANDING"], fixture)
     return response
 
-
-def get_lineups(fixture):
-    response = get(API_FOOTBALL["API_URI_FIXTURES_LINEUPS"], fixture)
-    return response
-
-
-async def get_statistics(fixture, team):
+def get_fixtures_statistics(fixture, team):
+    if ENVIRONMENT == "dev":
+        with open(f"{JSON_API_FOOTBALL_RESPONSES_FOLDER}/fixtures_statistics.json") as f:
+            jts = json.load(f)
+            return jts  
     response = get(API_FOOTBALL["API_URI_FIXTURES_STATISTICS"], fixture, team)
     return response
 
+def get_h2h(ids_separate_with_line: str):
+    if ENVIRONMENT == "dev":
+        with open(f"{JSON_API_FOOTBALL_RESPONSES_FOLDER}/fixtures_h2h.json") as f:
+            jts = json.load(f)
+            return jts      
+    response = get(API_FOOTBALL["API_URI_FIXTURES_H2H"], ids_separate_with_line)
+    return response
+
+def get_prediction(fixture):
+    response = get(API_FOOTBALL["API_URI_PREDICTIONS"], fixture)
+    return response
 
 def get_player_statistics(fixture, team):
     response = get(API_FOOTBALL["API_URI_FIXTURES_PLAYER_STATISTICS"], fixture, team)
     return response
 
-
-def get_h2h(ids_separate_with_line: str):
-    response = get(API_FOOTBALL["API_URI_FIXTURES_H2H"], ids_separate_with_line)
-    return response
-
-
-def get_prediction(fixture):
-    response = get(API_FOOTBALL["API_URI_PREDICTIONS"], fixture)
+def get_lineups(fixture):
+    response = get(API_FOOTBALL["API_URI_FIXTURES_LINEUPS"], fixture)
     return response

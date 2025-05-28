@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class StatisticsTypes(Enum):
     SHOTS_ON_GOAL = "Shots on Goal"
     SHOTS_OFF_GOAL = "Shots off Goal"
@@ -16,3 +17,13 @@ class StatisticsTypes(Enum):
     GOALKEEPER_SAVES = "Goalkeeper Saves"
     TOTAL_PASSES = "Total passes"
     PASSES_ACCURATE = "Passes accurate"
+    LOCAL_GOALS = "Home Goals"
+    AWAY_GOALS = "Away Goals"
+    LOCAL_HALFTIME_GOALS = "Home Halftime Goals"
+    AWAY_HALFTIME_GOALS = "Away Halftime Goals"
+    LOCAL_FULLTIME_GOALS = "Home Fulltime Goals"
+    AWAY_FULLTIME_GOALS = "Away Fulltime Goals"
+    LOCAL_EXTRATIME_GOALS = "Local Extratime Goals"
+    AWAY_EXTRATIME_GOALS = "Away Extratime Goals"
+    LOCAL_PENALTY = "Home Penalty"
+    AWAY_PENTALTY = "Away Penalty"

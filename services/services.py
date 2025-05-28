@@ -1,7 +1,6 @@
 import requests
 from constant import API_FOOTBALL, CONTENT_TYPE
 
-
 def get(url: str, **kwargs):
     headers = {
         "x-rapidapi-key": API_FOOTBALL["API_KEY"],
@@ -9,7 +8,6 @@ def get(url: str, **kwargs):
     }
     response = requests.get(API_FOOTBALL["API"] + url, headers=headers, params=kwargs)
     return response.json()
-
 
 def post(url: str, payload: dict):
     headers = {"Content-Type": CONTENT_TYPE}

@@ -28,6 +28,13 @@ class TeamOverview:
             "red": 3,
             "yellow": 2,
         },
+        matches:
+        {          
+            "total_played_games": 0,
+            "total_wins": 9,           
+            "total_draws": 5,
+            "total_loses": 9
+        }
     }
     """
     averages: dict
@@ -41,6 +48,10 @@ class TeamOverview:
     streak: dict
     """
     {
+          "played_games": 4,
+          "wins": 9,
+          "draws": 0,
+          "loses": 0,
 		  "best_win": '2-0',
 		  "worst_lost": '0-5',
 		  "biggest_goals_for": 2,
@@ -54,6 +65,10 @@ class TeamOverview:
     home: dict
     """
     {
+          "played_games": 4,
+          "wins": 9,
+          "draws": 0,
+          "loses": 0,
 		  "best_win": '2-0',
 		  "worst_lost": '0-5',
 		  "biggest_goals_for": 2,
@@ -72,7 +87,7 @@ class TeamOverview:
         "percentage": 80%
 	}
     """
-    penalty: dict
+    totals: dict
 
     """
     {
@@ -84,7 +99,7 @@ class TeamOverview:
                 "percentage": "15.15%"
             }
 	    },
-        "to_cards":
+        "to_get_cards":
         {
             "yellow":
             {
@@ -159,7 +174,7 @@ class TeamOverview:
     }
     
     """
-    goal_percentage: dict
+    percentages: dict
 
     def __init__(self, **kwargs):
         """
